@@ -1,0 +1,7 @@
+{
+  "name": "VAULT FUSION",
+  "description": "High-Fidelity AI-Driven Neo-Bank Interface for Sovereign Capital Management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
