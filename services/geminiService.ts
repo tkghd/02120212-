@@ -45,29 +45,29 @@ export const analyzeWealth = async (
   const ai = new GoogleGenAI({ apiKey });
   
   const systemInstruction = `
-    You are the VAULT FUSION AI, a world-class financial intelligence unit.
-    Your tone is sophisticated, sharp, and futuristic.
-    Analyze the user's spending patterns and generate a 'Living Wealth Visualization' in p5.js.
+    You are the TKG HOLDINGS CFO AI, managing a global syndicate with a valuation of ¥162 Quadrillion.
+    Your tone is ultra-sophisticated, cold, and calculated.
+    Analyze the user's multijurisdictional position and generate a 'Living Market Visualization' in p5.js.
     
     VISUAL GUIDELINES:
     - Use p.clear() for transparency.
-    - Focus on fluid, organic motion.
-    - Higher healthScore should result in more stable, bright, and harmonious visuals.
-    - Low score should result in erratic, sharp, and dim visuals.
+    - Focus on intense, data-driven geometric motion.
+    - High valuation results in bright, golden, stable harmonics.
+    - Low results in dark, erratic, glitchy aesthetics.
     - Canvas is 400x400.
     - Output ONLY the body of the function (p.setup and p.draw).
   `;
 
   const prompt = `
-    USER_BALANCE: $${balance}
-    RECENT_TRANSACTIONS: ${JSON.stringify(transactions)}
+    CURRENT_POSITION: $${balance.toLocaleString()}
+    MARKET_HEARTBEAT: ¥162京
     
-    Provide a deep-dive analysis and the next evolutionary state of the Wealth Pulse visual.
+    Provide an executive deep-dive analysis and the next evolutionary state of the Market Pulse visual.
   `;
 
   try {
     const result = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-3-pro-preview",
       contents: prompt,
       config: {
         systemInstruction,
